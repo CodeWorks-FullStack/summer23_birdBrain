@@ -13,6 +13,8 @@ class BirdsService {
     console.log('[APPSTATE BIRDS]', AppState.birds);
   }
 
+  // NOTE we don't need to make a request to the server to find a single bird, we can find the bird we want with its id from our birds array
+  // NOTE doing a find will run faster than if we had to make another request to the server
   setActiveBird(birdId) {
     let foundBird = AppState.birds.find(b => b.id == birdId)
     // console.log('[FOUND BIRD]', foundBird);

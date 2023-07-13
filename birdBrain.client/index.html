@@ -30,8 +30,11 @@
         <div class="navbar-nav">
           <!-- NAVLINKS -->
           <!-- <a href="#/about" class="nav-link">About</a> -->
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            onclick="app.BirdsController.setBirdForm()">Create</button>
+          <!-- <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Spot Bird"
+            onclick="app.BirdsController.setBirdForm()"> -->
+          <h1 class="selectable birdBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Spot Bird"
+            onclick="app.BirdsController.setBirdForm()">🦅</h1>
+          <!-- </button> -->
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -58,12 +61,14 @@
   </main>
 
   <!-- SECTION -->
-  <footer class="bg-dark text-light">
+  <footer class="text-dark">
     <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+      <p class="mb-0"><b>Made with 🐤 by The Federal Association of Bird Surveillance</b></p>
     </div>
   </footer>
 
+
+  <!-- SECTION MODAL STUFF -->
   <!-- Button trigger modal -->
   <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
@@ -71,6 +76,7 @@
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- NOTE we are using the Id "modal-guts" so that we can swap out what is inside of our model: when I click on a bird I want the active bird to be in the modal AND when I click on the create bird form I want the form to show up in the modal -->
     <div class="modal-dialog" id="modal-guts">
 
 
