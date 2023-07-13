@@ -20,6 +20,10 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Bird.js').Bird|null} */
   bird = null
 
+
+  /** @type {import('./models/Profile.js').Profile[]} */
+  birdWatchers = []
+
   // Used to load initial data
   init() {
 

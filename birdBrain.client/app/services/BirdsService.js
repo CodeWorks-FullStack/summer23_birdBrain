@@ -5,6 +5,7 @@ import { api } from "./AxiosService.js"
 
 class BirdsService {
 
+
   async getBirds() {
     const res = await api.get('api/birds')
     console.log('[GETTING BIRDS]', res.data);

@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Bird } from "../models/Bird.js";
+import { birdWatchersService } from "../services/BirdWatchersService.js";
 import { birdsService } from "../services/BirdsService.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";

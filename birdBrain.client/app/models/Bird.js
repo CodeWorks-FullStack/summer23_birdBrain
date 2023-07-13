@@ -8,6 +8,8 @@ export class Bird {
     this.canFly = data.canFly
     this.size = data.size
     this.reporterId = data.reporterId
+    this.reporter = data.reporter
+    this.birdWatcherCount = data.birdWatcherCount
   }
 
 
@@ -17,6 +19,14 @@ export class Bird {
       <div class="birdShadow elevation-5 selectable rounded" onclick="app.BirdsController.setActiveBird('${this.id}')" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <img class="birdImg" src="${this.imgUrl}" alt="${this.name}">
         <p class="fs-5 p-2"><b>${this.name}</b></p>
+        <div class="d-flex justify-content-around p-2">
+          <div>
+            <p class="p-2">👀 : ${this.birdWatcherCount}</p>
+          </div>
+          <div class="text-end">
+            <img class="rounded-circle w-50" src="${this.reporter.picture}" alt="${this.reporter.name}">
+          </div>
+        </div>
       </div>
     </div>
     `
@@ -40,7 +50,9 @@ export class Bird {
             <p>Can Fly: ${this.canFly}</p>
           </div>
         </div>
+        <div class="d-flex" id="birdWatchers"></div>
         <div class="modal-footer">
+          <button class="btn btn-success">Watch</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
