@@ -15,6 +15,7 @@ function _drawBirds() {
 
 function _drawActiveBird() {
   let activeBird = AppState.bird
+  // NOTE the active bird will show up in the modal since the target id is modal-guts
   setHTML('modal-guts', activeBird?.ActiveBirdTemplate)
 }
 
@@ -48,6 +49,7 @@ export class BirdsController {
     }
   }
 
+  // NOTE the function setBirdForm will run when we click on the 'spot bird' button, and it will show up in the modal since we are targeting the id modal-guts
   setBirdForm() {
     setHTML('modal-guts', Bird.BirdForm)
   }
@@ -66,6 +68,7 @@ export class BirdsController {
       // console.log('my formData', formData);
       await birdsService.createBird(formData)
       form.reset()
+      // NOTE this will close the modal after we submit the form and it is reset, we need to target the id of the modal
       // @ts-ignore
       bootstrap.Modal.getOrCreateInstance('#exampleModal').hide()
     } catch (error) {

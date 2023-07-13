@@ -14,9 +14,9 @@ export class Bird {
   get BirdCardTemplate() {
     return `
     <div class="col-md-3 col-12 p-3">
-      <div class="bg-white elevation-5 selectable rounded" onclick="app.BirdsController.setActiveBird('${this.id}')" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <img class="img-fluid rounded-top" src="${this.imgUrl}" alt="${this.name}">
-        <h1>${this.name}</h1>
+      <div class="birdShadow elevation-5 selectable rounded" onclick="app.BirdsController.setActiveBird('${this.id}')" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <img class="birdImg" src="${this.imgUrl}" alt="${this.name}">
+        <p class="fs-5 p-2"><b>${this.name}</b></p>
       </div>
     </div>
     `
@@ -29,7 +29,7 @@ export class Bird {
           <h1 class="modal-title fs-5" id="exampleModalLabel">${this.name}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body row">
+        <div class="modal-body row paper-bg">
           <div class="col-md-6 col-12">
             <img class="img-fluid"
               src="${this.imgUrl}"
