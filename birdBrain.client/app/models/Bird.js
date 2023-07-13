@@ -10,8 +10,6 @@ export class Bird {
     this.reporterId = data.reporterId
     this.reporter = data.reporter
     this.birdWatcherCount = data.birdWatcherCount
-    // 😉
-    this.jeremyIsSoCoolAndHandsome = true
   }
 
 
