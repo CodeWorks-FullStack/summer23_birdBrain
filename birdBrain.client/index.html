@@ -20,9 +20,7 @@
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
       <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">birdBrain.client</span>
+        <h1>BirdBrain</h1>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +29,9 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
+          <!-- <a href="#/about" class="nav-link">About</a> -->
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            onclick="app.BirdsController.setBirdForm()">Create</button>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -41,31 +41,17 @@
   <!-- SECTION -->
   <main>
 
-    <section id="auth-template">
-      <!-- TODO REMOVE THE AUTH TEMPLATE ONCE YOU VERIFY YOUR AUTH SETTINGS -->
-      <div class="container-fluid">
-        <div class="row my-3">
-          <div class="col-lg-5" id="auth-settings">
-            <div class="card p-2 skeleton-loader">
-              <div class="card-title p-2">
-                <div class="d-flex align-items-center">
-                  <div class="skeleton-loader avatar"></div>
-                  <div class="skeleton-loader text mx-2"></div>
-                </div>
-              </div>
-              <div class="card-body border-top">
-                <div class="skeleton-loader text block"></div>
-                <div class="skeleton-loader text block"></div>
-                <div class="skeleton-loader text block"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="router-view">
       <!-- primary viewport -->
+      <div class="container-fluid">
+        <div class="row" id="birds">
+          <!-- STUB Bird Card -->
+          <!-- <div class="col-md-3 col-12">
+            <img src="" alt="">
+            <h1>BIRD NAME</h1>
+          </div> -->
+        </div>
+      </div>
     </section>
 
 
@@ -77,6 +63,80 @@
       <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
     </div>
   </footer>
+
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modal-guts">
+
+
+      <!-- STUB Active Bird Details -->
+      <!-- <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">BIRD NAME</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row">
+          <div class="col-md-6 col-12">
+            <img class="img-fluid"
+              src="https://images.unsplash.com/photo-1619038779484-a27362fb82cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
+              alt="">
+          </div>
+          <div class="col-md-6 col-12">
+            BIRD INFO
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div> -->
+
+      <!-- STUB Create Bird Form -->
+      <!-- <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Report Bird</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row">
+          <form action="" onsubmit="app.BirdsController.createBird(event)">
+            <div class="mb-2">
+              <label for="name">Name Of Bird</label>
+              <input type="text" name="name" id="name" minlength="3" maxlength="75" required
+                placeholder="Name of Bird...">
+            </div>
+            <div class="mb-2">
+              <label for="imgUrl">Image of the Spotted Bird</label>
+              <input type="url" required name="imgUrl" id="imgUrl" minlength="3" maxlength="300">
+            </div>
+            <div class="mb-2">
+              <label for="canFly">Is it airborne?</label>
+              <input type="checkbox" checked name="canFly" id="canFly">
+            </div>
+            <div class="mb-2">
+              <label for="size">Size</label>
+              <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>

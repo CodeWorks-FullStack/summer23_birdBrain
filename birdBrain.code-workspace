@@ -45,8 +45,6 @@
       "commandCenter.border": "#15202b99",
       "sash.hoverBorder": "#b48daf",
       "statusBar.background": "#a06e99",
-      "statusBar.debuggingBackground": "#6ea075",
-      "statusBar.debuggingForeground": "#15202b",
       "statusBar.foreground": "#15202b",
       "statusBarItem.hoverBackground": "#84577e",
       "statusBarItem.remoteBackground": "#a06e99",
