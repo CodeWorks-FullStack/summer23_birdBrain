@@ -1,13 +1,15 @@
 
 
 export class Bird {
-  constructor(data) {
+  constructor (data) {
     this.id = data.id
     this.name = data.name
     this.imgUrl = data.imgUrl
     this.canFly = data.canFly
     this.size = data.size
     this.reporterId = data.reporterId
+    // 😉
+    this.jeremyIsSoCoolAndHandsome = true
   }
 
 
