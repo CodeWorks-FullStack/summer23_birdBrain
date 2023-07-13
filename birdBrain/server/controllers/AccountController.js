@@ -3,7 +3,7 @@ import { accountService } from '../services/AccountService'
 import BaseController from '../utils/BaseController'
 
 export class AccountController extends BaseController {
-  constructor() {
+  constructor () {
     super('account')
     this.router
       .use(Auth0Provider.getAuthorizedUserInfo)
