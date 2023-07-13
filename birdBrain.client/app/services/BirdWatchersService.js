@@ -11,6 +11,18 @@ class BirdWatchersService {
     AppState.birdWatchers = res.data.map(p => new Profile(p.watcher))
     console.log('[BIRDWATCHERS IN THE APPSTATE]', AppState.birdWatchers);
   }
+
+  async becomeWatcher() {
+    const bird = AppState.bird
+    const res = await api.post('api/birdWatchers', { birdId: bird?.id })
+    // console.log('[BECOME WATCHER]', res.data);
+    // @ts-ignore
+    bird.birdWatcherCount++
+    AppState.birdWatchers.push(new Profile(res.data.watcher))
+    console.log('[BIRDWATCHERS APPSTATE]', AppState.birdWatchers);
+    AppState.emit('birdWatchers')
+    AppState.emit('birds')
+  }
 }
 
 

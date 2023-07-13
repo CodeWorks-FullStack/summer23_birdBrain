@@ -52,7 +52,7 @@ export class Bird {
         </div>
         <div class="d-flex" id="birdWatchers"></div>
         <div class="modal-footer">
-          <button class="btn btn-success">Watch</button>
+          <button class="btn btn-success" title="Watch this bird" onclick="app.BirdWatchersController.becomeWatcher()"> <h1>👁‍🗨</h1> </button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>

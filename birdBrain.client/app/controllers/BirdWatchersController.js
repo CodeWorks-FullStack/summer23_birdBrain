@@ -29,4 +29,14 @@ export class BirdWatchersController {
       Pop.error(error.message)
     }
   }
+
+
+  async becomeWatcher() {
+    try {
+      await birdWatchersService.becomeWatcher()
+    } catch (error) {
+      console.log(error);
+      Pop.error(error.message)
+    }
+  }
 }
